@@ -12,6 +12,11 @@
 		05E493B01CA724B30098B8E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E493AE1CA724B30098B8E6 /* Main.storyboard */; };
 		05E493B21CA724B30098B8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E493B11CA724B30098B8E6 /* Assets.xcassets */; };
 		05E493B51CA724B30098B8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E493B31CA724B30098B8E6 /* LaunchScreen.storyboard */; };
+		1812DBA81F0A715600DBED71 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812DBA71F0A715600DBED71 /* SecondViewController.swift */; };
+		1812DBAA1F0A719C00DBED71 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812DBA91F0A719C00DBED71 /* PickerViewController.swift */; };
+		1812DBAD1F0A756600DBED71 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812DBAC1F0A756600DBED71 /* ThirdViewController.swift */; };
+		1812DBAF1F0A771500DBED71 /* BottomMenuPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812DBAE1F0A771500DBED71 /* BottomMenuPickerView.swift */; };
+		186AFA2F1F0A78F800063D81 /* SampleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AFA2E1F0A78F800063D81 /* SampleTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		05E493B11CA724B30098B8E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05E493B41CA724B30098B8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E493B61CA724B30098B8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1812DBA71F0A715600DBED71 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1812DBA91F0A719C00DBED71 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		1812DBAC1F0A756600DBED71 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		1812DBAE1F0A771500DBED71 /* BottomMenuPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomMenuPickerView.swift; sourceTree = "<group>"; };
+		186AFA2E1F0A78F800063D81 /* SampleTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,50 @@
 			isa = PBXGroup;
 			children = (
 				05E493AA1CA724B30098B8E6 /* AppDelegate.swift */,
-				05E493AC1CA724B30098B8E6 /* ViewController.swift */,
-				05E493AE1CA724B30098B8E6 /* Main.storyboard */,
+				1812DBAB1F0A71A000DBED71 /* Custom Picker */,
+				186AFA2D1F0A787B00063D81 /* Controller */,
+				186AFA2C1F0A786E00063D81 /* View */,
 				05E493B11CA724B30098B8E6 /* Assets.xcassets */,
-				05E493B31CA724B30098B8E6 /* LaunchScreen.storyboard */,
 				05E493B61CA724B30098B8E6 /* Info.plist */,
 			);
 			path = "multiple picker textfield";
+			sourceTree = "<group>";
+		};
+		1812DBAB1F0A71A000DBED71 /* Custom Picker */ = {
+			isa = PBXGroup;
+			children = (
+				1812DBA91F0A719C00DBED71 /* PickerViewController.swift */,
+				1812DBAE1F0A771500DBED71 /* BottomMenuPickerView.swift */,
+			);
+			name = "Custom Picker";
+			sourceTree = "<group>";
+		};
+		186AFA2B1F0A786700063D81 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				186AFA2E1F0A78F800063D81 /* SampleTableCell.swift */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		186AFA2C1F0A786E00063D81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				186AFA2B1F0A786700063D81 /* TableCell */,
+				05E493B31CA724B30098B8E6 /* LaunchScreen.storyboard */,
+				05E493AE1CA724B30098B8E6 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		186AFA2D1F0A787B00063D81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1812DBAC1F0A756600DBED71 /* ThirdViewController.swift */,
+				1812DBA71F0A715600DBED71 /* SecondViewController.swift */,
+				05E493AC1CA724B30098B8E6 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +143,7 @@
 				TargetAttributes = {
 					05E493A61CA724B20098B8E6 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -135,7 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1812DBA81F0A715600DBED71 /* SecondViewController.swift in Sources */,
 				05E493AD1CA724B30098B8E6 /* ViewController.swift in Sources */,
+				1812DBAD1F0A756600DBED71 /* ThirdViewController.swift in Sources */,
+				1812DBAA1F0A719C00DBED71 /* PickerViewController.swift in Sources */,
+				1812DBAF1F0A771500DBED71 /* BottomMenuPickerView.swift in Sources */,
+				186AFA2F1F0A78F800063D81 /* SampleTableCell.swift in Sources */,
 				05E493AB1CA724B30098B8E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +308,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apoorvmote.multiple-picker-textfield";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -266,6 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apoorvmote.multiple-picker-textfield";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -288,6 +343,7 @@
 				05E493BB1CA724B30098B8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
