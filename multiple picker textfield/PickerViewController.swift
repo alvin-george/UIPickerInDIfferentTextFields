@@ -1,10 +1,7 @@
 //
 //  PickerViewController.swift
 //  PickerView
-//
-//  Created by iOS Developer on 12/9/16.
-//  Copyright © 2016 Chantier. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
@@ -13,8 +10,7 @@ protocol UIPickerControllerDataDelegate {
     func getPickerData (selectedIndex : Int , selectedItem : String?)
 }
 class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    
-    @IBOutlet weak var toolbar: UIToolbar!
+
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -26,6 +22,8 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     var targetViewController :UIViewController?
     
     var delegate:UIPickerControllerDataDelegate!
+    
+    var appUIColor_First:UIColor = UIColor(rgb: 0x3F51B5)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +40,25 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         }
         return 0
     }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var pickerLabel = view as? UILabel;
+        
+        if (pickerLabel == nil)
+        {
+            pickerLabel = UILabel()
+            
+           pickerLabel?.font = UIFont.systemFont(ofSize: 25)
+            pickerLabel?.textAlignment = NSTextAlignment.center
+            pickerLabel?.textColor =  appUIColor_First
+        }
+        
+        if let item = pickerViewItems {
+            pickerLabel?.text = item[row]
+        }
+        
+        return pickerLabel!;
+    }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if let item = pickerViewItems {
             return item[row]
@@ -53,18 +70,6 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         selectedIndex = row
     }
     
-    @IBAction func doneButtonClicked(_ sender: AnyObject) {
-        
-        DispatchQueue.main.async {
-            self.delegate.getPickerData(selectedIndex: self.selectedIndex, selectedItem: self.pickerViewItems?[self.selectedIndex])
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func cancelButtonClicked(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-    }
     @IBAction func cancelPicker(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

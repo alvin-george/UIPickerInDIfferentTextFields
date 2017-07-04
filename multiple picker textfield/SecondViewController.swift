@@ -23,7 +23,10 @@ class SecondViewController: UIViewController,UIPickerControllerDataDelegate, UIT
     }
     override func viewWillAppear(_ animated: Bool) {
    
-        makeBottomMenuPicker()
+        //makeBottomMenuPicker()
+        
+        
+        
     }
     
     func makeBottomMenuPicker()
@@ -38,7 +41,7 @@ class SecondViewController: UIViewController,UIPickerControllerDataDelegate, UIT
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        //textField.resignFirstResponder()
+        textField.resignFirstResponder()
         
         switch textField.tag {
         case 0:
@@ -79,9 +82,6 @@ class SecondViewController: UIViewController,UIPickerControllerDataDelegate, UIT
         lacrtPickerView.modalPresentationStyle = .overCurrentContext
         self.present(lacrtPickerView, animated: true, completion: nil)
         
-        
-        
-        
     }
     //Custom Delegates
     func getPickerData(selectedIndex : Int, selectedItem : String?){
@@ -90,11 +90,9 @@ class SecondViewController: UIViewController,UIPickerControllerDataDelegate, UIT
         
         selectedOption =  selectedItem
         
-        
+        subjectTextField.text =  selectedItem
         
         self.reloadInputViews()
-        
-        
         
     }
     
